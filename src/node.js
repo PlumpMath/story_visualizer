@@ -20,10 +20,8 @@ var SK = SK || {};
 		},
 		links: [],
 	
-		create: function (number) {
-			var self = Object.create(this);
-			self.number = number;
-			return self;
+		create: function () {
+			return Object.create(this);
 		},
 	
 		get_radius: function () {

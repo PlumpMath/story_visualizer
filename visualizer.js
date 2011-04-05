@@ -2,8 +2,8 @@
 	
 	var holder = $("#holder"),
 	
-	node = function (links) {
-		var p = SK.node.create();
+	page = function (number, links) {
+		var p = SK.page.create(number);
 		if (links) {
 			p.set_links(links);
 		}
@@ -18,21 +18,22 @@
 		return l;
 	},
 	
-	root_node = node([
-		link(node([
-			link(node()),
-			link(node([
-				link(node())
+	root_node = page(1, [
+		link(page(2, [
+			link(page(3)),
+			link(page(4, [
+				link(page(5))
 			]))
 		])),
-		link(node([
-			link(node([
-				link(node()), 
-				link(node([link(node([link(node())]))])), 
-				link(node())
+		link(page(6, [
+			link(page(7, [
+				link(page(8)), 
+				link(page(9, [link(page(10, [link(page(11))]))])), 
+				link(page(12))
 			])),
-			link(node()),
-			link(node())
+			link(page(13)),
+			link(page(14)),
+			link(page(15))
 		]))
 	]),
 	
