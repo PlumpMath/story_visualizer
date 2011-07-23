@@ -11,7 +11,7 @@
 	},
 	
 	link = function (node) {
-		var l = SK.link.create();
+		var l = SK.alternative.create();
 		if (node) {
 			l.set_node(node);
 		}

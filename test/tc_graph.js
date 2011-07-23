@@ -15,6 +15,10 @@
 				root_node: this.node
 			});
 		},
+		
+		tearDown: function () {
+			this.graph.set_scale(1);
+		},
 
 		"test should calculate scale as ratio between required width and available width": function () {
 			assertEquals(3, this.graph.calculate_scale());

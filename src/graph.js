@@ -10,7 +10,7 @@ SK.graph = {
 	},
 	
 	set_scale: function (scale) {
-		SK.node.set_scale(scale);
+		SK.page.set_scale(scale);
 		SK.link.set_scale(scale);
 	},
 	
